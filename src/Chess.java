@@ -1,7 +1,7 @@
-public interface ChessPiece {
-    int getRow();
-    int getColumn();
-    String getColor();
-    boolean canMove(int row, int col);
-    boolean canKill(ChessPiece piece);
+public interface Chess {
+    int findRow();
+    int findColumn();
+    String findColor();
+    boolean mayMove(int row, int col);
+    boolean canDefeat(Chess piece);
 }
