@@ -1,29 +1,19 @@
 import java.util.ArrayList;
-
-// Parent class for all chess pieces
-public abstract class ParentPiece implements ChessPiece {
-
+// Parent class for all chess pieces (declared all variables used everywhere here)
+public abstract class Parent implements Chess {
     protected int r;
     protected int c;
     protected String color;
-
-    public static ArrayList<ChessPiece> pieces = new ArrayList<>(); // Would be filled with every chess piece on the board
-
-    public ParentPiece(int row, int col, String color) {
+    public static ArrayList<Chess> pieces = new ArrayList<>();
+    public Parent(int row, int col, String color) {
         r = row;
         c = col;
         this.color = color;
-    }
-
-    public int getRow() {
+    }public int findRow() {
         return r;
-    }
-
-    public int getColumn() {
+    }public int findColumn() {
         return c;
-    }
-
-    public String getColor() {
+    }public String findColor() {
         return color;
     }
 }
